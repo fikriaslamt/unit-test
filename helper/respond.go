@@ -25,7 +25,7 @@ func OkWithMessage(c *gin.Context, message interface{}) {
 }
 
 func NoContent(c *gin.Context) {
-	c.JSON(http.StatusCreated, nil)
+	c.JSON(http.StatusOK, nil)
 }
 
 // not ok
