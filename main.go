@@ -12,7 +12,6 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-
 	err = config.InitGorm()
 	if err != nil {
 		panic(err)
@@ -20,5 +19,6 @@ func init() {
 }
 
 func main() {
+
 	app.StartApplication()
 }

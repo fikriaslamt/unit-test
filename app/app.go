@@ -10,6 +10,7 @@ import (
 	"sesi_8/service"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 var router = gin.New()
@@ -20,6 +21,11 @@ func StartApplication() {
 	server := handler.NewHttpServer(service)
 
 	route.RegisterApi(router, server)
+
+	err := godotenv.Load()
+	if err != nil {
+		panic(err)
+	}
 
 	port := os.Getenv("PORT")
 	router.Run(fmt.Sprintf(":%s", port))
