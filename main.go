@@ -19,9 +19,6 @@ func init() {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		panic(err)
-	}
+
 	app.StartApplication()
 }
